@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" type="image/svg" href="img/logo1.svg">
+        <title>Reserve</title>
+
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href ="style_reserve.css">
+
+        <script defer src ="reserve.js"></script>
+
+
+
+    </head>
+
+
+
+
+    <body>
+        
+
+        
+        <div class = "heading">
+            <h1>8 BALL</h1> 
+        </div>
+        
+        <div class="container">
+            
+            <h2>Reserve <p id="Date"></p></h2>
+            
+            <form onsubmit="sendEmail(); reset(); return false;">
+          
+                <label for="name">Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your FirstName.." required>
+          
+                <input type="text" id="lname" name="lastname" placeholder="Your LastName.." required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email.." >
+                
+                
+                
+                <label for="visitor">Visitor</label>
+                <select id="visitor" name="visitor">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+              
+                
+                <label for="time">Time</label>
+                <select id="time" name="time"> 
+                    <option value="Monday 10:00am-11:00am">Monday: 10:00am-11:00am</option>
+                    <option value="Wednesday 02:00pm-03:00pm">Wednesday: 02:00pm-03:00pm</option>
+                    <option value="Friday 03:00pm-04:00pm">Friday: 03:00pm-04:00pms</option>
+                </select>
+          
+                <label for="Message">Message</label>
+                <textarea id="Message" name="Message" placeholder="Write something.." style="height:200px"></textarea>
+          
+                
+                
+                <button id="submit">Submit</button>
+          
+            </form>
+        
+        </div>
+            
+        <div class ="contact">
+            <p><img src ="img/icons8-man-64.png">Kevin Wu</p>
+            <p><img src ="img/icons8-phone-64.png">&nbsp;438-506-2857</p>
+            <p>&nbsp;&nbsp;&nbsp;<img src ="img/icons8-email-64.png">&nbsp;&nbsp;ywu367@uottawa.ca</p>
+        </div>
+    
+
+    </body>
+    
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    
+    <script>
+
+        function sendEmail(){  
+            var fname = document.getElementById("fname").value;
+            var lname = document.getElementById("lname").value;
+            var email = document.getElementById("email").value;
+            var visitor = document.getElementById("visitor").value;
+            var Message = document.getElementById("Message").value;
+            var body = 'First Name: '+fname +'<br/> Last Name: '+lname +'<br/> Email: '+ email +'<br/> Number of visitor: ' + visitor + '<br/> Message: '+Message;
+            
+            Email.send({
+                SecureToken : "C973D7AD-F097-4B95-91F4-40ABC5567812",
+                To : '254318164@qq.com',
+                From : email,
+                Subject : "Reserve Form",
+                Body : body
+            }).then(
+                message => alert("Reservation Sent Successfully")
+            );
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            // Email.send({
+            //     Host : "smtp.elasticemail.com",
+            //     Username : "chiggawuy@gmail.com",
+            //     Password : "205F58D3C91D8DF281C2B924E1C3C988809B",
+            //     To : "254318164@qq.com",
+            //     From : "chiggawuy@gmail.com",
+            //     Subject : "Reserve Form",
+            //     Body : body
+            // }).then(
+            //     message => alert("Reserve Sent Successfully")
+            // );
+            
+            
+            //e9ff3eac-9f18-4950-a738-8b0ae170d55b
+            
+             // 205F58D3C91D8DF281C2B924E1C3C988809B
+          
+        }
+    </script>
+
+
+
+</html>

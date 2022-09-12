@@ -1,0 +1,141 @@
+body{
+    background-color: #1b1b1b;
+}
+
+.heading{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+h1{
+
+    
+    
+    font-family: Algerian;
+    background: linear-gradient(75deg, #967d46 51%, #FFB6C1 49%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+
+    /* add a border*/
+    width: 53%;
+    padding-bottom: 19px;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(75deg, #967d46 51%, #FFB6C1 49%);
+    border-image-slice: 1;
+    
+    
+}
+
+
+h2{
+    
+    align-items: center;
+    text-align: center;
+    font-size: xx-large;
+    
+}
+
+h2 p{
+    
+    font-size: medium;
+    background-color: #1b1b1b;
+    color:#967d46;
+    margin-left: 2.1cm;
+    margin-right: 2cm;
+    border-radius: 10px;
+}
+
+.container {
+    border-radius: 5px;  /*为什么不加border也可以调*/
+    background-color: #967d46;
+    padding: 20px;
+    margin: 2%;
+
+}
+
+
+input[type=text], select, textarea {
+
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+  
+input[type=email]{
+    
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+
+
+
+button[type=submit] {
+    background-color: #1b1b1b;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type=submit]:hover {
+    background-color: #45a049;
+}
+  
+
+
+.contact{
+    
+    
+    border-bottom: 3px solid #967d46;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #967d46;
+}
+
+
+img{
+    width: 36px;
+    height: 40px;
+    vertical-align: middle;
+}
+
+@media only screen and (min-width:1847px){
+    .contact{
+
+        border-bottom: 3px solid #967d46;
+        margin-left: 42%;
+        margin-right: 42%;
+        margin-bottom: 1cm;
+        color: #967d46;
+
+    }
+    
+    
+    img{
+        width: 40px;
+        height: 40px;
+        vertical-align: middle;
+    }
+
+    
+
+}

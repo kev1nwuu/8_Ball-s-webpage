@@ -1,0 +1,94 @@
+body{
+    background-color: #1b1b1b ;
+    margin: 27px;
+    padding: 0;
+
+
+}
+
+.heading{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+h1{
+
+    
+    
+    font-family: Algerian;
+    background: linear-gradient(75deg, #967d46 51%, #FFB6C1 49%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+
+    /* add a border*/
+    width: 53%;
+    padding-bottom: 19px;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(75deg, #967d46 51%, #FFB6C1 49%);
+    border-image-slice: 1;
+    
+    
+}
+
+
+
+.gallery{
+    
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #967d46;
+    border-radius: 30px;
+    padding-bottom: 1cm;
+}
+
+img{
+    margin-top: 1cm;
+
+    width:90%;
+    height: 93%;
+    border:3px solid #1b1b1b;
+    border-radius: 30px;
+}
+
+@media only screen and (min-width:1847px){
+
+    
+    
+    .gallery{
+        
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        background-color: #967d46;
+        border-radius: 30px;
+        margin: 1cm;
+        padding:1cm;
+    }
+    
+    img{
+        margin-top: 0cm;
+
+        width:90%;
+        height: 93%;
+        padding: 0.5cm;
+        border:3px solid #1b1b1b;
+        border-radius: 30px;
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
